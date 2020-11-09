@@ -1,5 +1,5 @@
 <?php
-namespace alexLE\DHLExpress;
+namespace nebbia\DHLExpress;
 
 class DeleteRequest extends DataClass {
     /**

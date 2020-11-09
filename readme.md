@@ -19,7 +19,7 @@ This Project is written for the MyDHL API  **v1**.
 
 You can use [Composer](https://getcomposer.org/) to install the package to your project:
 
-`composer require alex-le/dhl-express-php-sdk`
+`composer require nebbia-fitness/dhl-express-php-sdk`
 
 ## Supported API Operations
 

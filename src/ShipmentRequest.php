@@ -1,5 +1,5 @@
 <?php
-namespace alexLE\DHLExpress;
+namespace nebbia\DHLExpress;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\TransferException;

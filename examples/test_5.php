@@ -1,20 +1,20 @@
 <?php
 require_once("vendor/autoload.php");
 
-use alexLE\DHLExpress\Ship;
-use alexLE\DHLExpress\Address;
-use alexLE\DHLExpress\Shipper;
-use alexLE\DHLExpress\Contact;
-use alexLE\DHLExpress\Packages;
-use alexLE\DHLExpress\Recipient;
-use alexLE\DHLExpress\Commodities;
-use alexLE\DHLExpress\Credentials;
-use alexLE\DHLExpress\ShipmentInfo;
-use alexLE\DHLExpress\SpecialService;
-use alexLE\DHLExpress\ShipmentRequest;
-use alexLE\DHLExpress\RequestedPackage;
-use alexLE\DHLExpress\RequestedShipment;
-use alexLE\DHLExpress\InternationalDetail;
+use nebbia\DHLExpress\Ship;
+use nebbia\DHLExpress\Address;
+use nebbia\DHLExpress\Shipper;
+use nebbia\DHLExpress\Contact;
+use nebbia\DHLExpress\Packages;
+use nebbia\DHLExpress\Recipient;
+use nebbia\DHLExpress\Commodities;
+use nebbia\DHLExpress\Credentials;
+use nebbia\DHLExpress\ShipmentInfo;
+use nebbia\DHLExpress\SpecialService;
+use nebbia\DHLExpress\ShipmentRequest;
+use nebbia\DHLExpress\RequestedPackage;
+use nebbia\DHLExpress\RequestedShipment;
+use nebbia\DHLExpress\InternationalDetail;
 
 $credentials = new Credentials(true);
 $credentials

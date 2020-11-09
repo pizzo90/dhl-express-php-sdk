@@ -1,5 +1,5 @@
 <?php
-namespace alexLE\DHLExpress;
+namespace nebbia\DHLExpress;
 
 
 class Contact extends DataClass {

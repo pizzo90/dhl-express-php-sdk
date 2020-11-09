@@ -1,7 +1,7 @@
 <?php
 
 
-namespace alexLE\DHLExpress;
+namespace nebbia\DHLExpress;
 
 
 class DocumentImage extends DataClass {
