@@ -1,7 +1,9 @@
 <?php
+
 namespace nebbia\DHLExpress;
 
-class ShipmentInfo extends DataClass {
+class ShipmentInfo extends DataClass
+{
 
     const DROP_OFF_TYPE_REGULAR_PICKUP = 'REGULAR_PICKUP';
     const DROP_OFF_TYPE_REQUEST_COURIER = 'REQUEST_COURIER';
@@ -37,15 +39,12 @@ class ShipmentInfo extends DataClass {
      */
     const SERVICE_TYPE_ECONOMY_SELECT_EU = 'W';
     const SERVICE_TYPE_ECONOMY_SELECT_NON_DOC = 'H';
-
     const UNIT_OF_MEASRUREMENTS_KG_CM = 'SI';
     const UNIT_OF_MEASRUREMENTS_LB_IN = 'SU';
-
     const LABEL_TYPE_PDF = 'PDF';
     const LABEL_TYPE_ZPL = 'ZPL';
     const LABEL_TYPE_EPL = 'EPL';
     const LABEL_TYPE_LP2 = 'LP2';
-
     const LABEL_TEMPLATE_ECOM26_84_001 = 'ECOM26_84_001';
     const LABEL_TEMPLATE_ECOM26_84_A4_001 = 'ECOM26_84_A4_001';
     const LABEL_TEMPLATE_ECOM_TC_A4 = 'ECOM_TC_A4';
@@ -102,6 +101,11 @@ class ShipmentInfo extends DataClass {
     protected $paperlessTradeEnabled = false;
 
     /**
+     * @var strin
+     */
+    protected $paperlessTradeImage;
+
+    /**
      * @var DocumentImage[]
      */
     protected $documentImages = [];
@@ -124,7 +128,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return string
      */
-    public function getDropOffType() {
+    public function getDropOffType()
+    {
         return $this->dropOffType;
     }
 
@@ -133,7 +138,8 @@ class ShipmentInfo extends DataClass {
      * @param string $dropOffType
      * @return ShipmentInfo
      */
-    public function setDropOffType($dropOffType) {
+    public function setDropOffType($dropOffType)
+    {
         $this->dropOffType = $dropOffType;
         return $this;
     }
@@ -141,7 +147,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return string
      */
-    public function getServiceType() {
+    public function getServiceType()
+    {
         return $this->serviceType;
     }
 
@@ -149,7 +156,8 @@ class ShipmentInfo extends DataClass {
      * @param string $serviceType
      * @return ShipmentInfo
      */
-    public function setServiceType($serviceType) {
+    public function setServiceType($serviceType)
+    {
         $this->serviceType = $serviceType;
         return $this;
     }
@@ -157,7 +165,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return int
      */
-    public function getAccount() {
+    public function getAccount()
+    {
         return $this->account;
     }
 
@@ -165,7 +174,8 @@ class ShipmentInfo extends DataClass {
      * @param int $account
      * @return ShipmentInfo
      */
-    public function setAccount($account) {
+    public function setAccount($account)
+    {
         $this->account = $account;
         return $this;
     }
@@ -173,7 +183,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return string
      */
-    public function getCurrency() {
+    public function getCurrency()
+    {
         return $this->currency;
     }
 
@@ -181,7 +192,8 @@ class ShipmentInfo extends DataClass {
      * @param string $currency
      * @return ShipmentInfo
      */
-    public function setCurrency($currency) {
+    public function setCurrency($currency)
+    {
         $this->currency = $currency;
         return $this;
     }
@@ -189,7 +201,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return string
      */
-    public function getUnitOfMeasurement() {
+    public function getUnitOfMeasurement()
+    {
         return $this->unitOfMeasurement;
     }
 
@@ -197,7 +210,8 @@ class ShipmentInfo extends DataClass {
      * @param string $unitOfMeasurement
      * @return ShipmentInfo
      */
-    public function setUnitOfMeasurement($unitOfMeasurement) {
+    public function setUnitOfMeasurement($unitOfMeasurement)
+    {
         $this->unitOfMeasurement = $unitOfMeasurement;
         return $this;
     }
@@ -205,7 +219,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return string
      */
-    public function getLabelType() {
+    public function getLabelType()
+    {
         return $this->labelType;
     }
 
@@ -213,7 +228,8 @@ class ShipmentInfo extends DataClass {
      * @param string $labelType
      * @return ShipmentInfo
      */
-    public function setLabelType($labelType) {
+    public function setLabelType($labelType)
+    {
         $this->labelType = $labelType;
         return $this;
     }
@@ -221,7 +237,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return string
      */
-    public function getLabelTemplate() {
+    public function getLabelTemplate()
+    {
         return $this->labelTemplate;
     }
 
@@ -229,7 +246,8 @@ class ShipmentInfo extends DataClass {
      * @param string $labelTemplate
      * @return ShipmentInfo
      */
-    public function setLabelTemplate($labelTemplate) {
+    public function setLabelTemplate($labelTemplate)
+    {
         $this->labelTemplate = $labelTemplate;
         return $this;
     }
@@ -238,7 +256,8 @@ class ShipmentInfo extends DataClass {
      * @param SpecialService $specialService
      * @return ShipmentInfo
      */
-    public function addSpecialService(SpecialService $specialService) {
+    public function addSpecialService(SpecialService $specialService)
+    {
         $this->specialServices[] = $specialService;
         return $this;
     }
@@ -246,28 +265,32 @@ class ShipmentInfo extends DataClass {
     /**
      * @param DocumentImage $documentImage
      */
-    public function addDocumentImage(DocumentImage $documentImage) {
+    public function addDocumentImage(DocumentImage $documentImage)
+    {
         $this->documentImages[] = $documentImage;
     }
 
     /**
      * @return DocumentImage[]
      */
-    public function getDocumentImages() {
+    public function getDocumentImages()
+    {
         return $this->documentImages;
     }
 
     /**
      * @return SpecialService[]
      */
-    public function getSpecialServices() {
+    public function getSpecialServices()
+    {
         return $this->specialServices;
     }
 
     /**
      * @return Billing
      */
-    public function getBilling() {
+    public function getBilling()
+    {
         return $this->billing;
     }
 
@@ -275,7 +298,8 @@ class ShipmentInfo extends DataClass {
      * @param Billing $billing
      * @return ShipmentInfo
      */
-    public function setBilling($billing) {
+    public function setBilling($billing)
+    {
         $this->billing = $billing;
         return $this;
     }
@@ -283,7 +307,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return LabelOptions
      */
-    public function getLabelOptions() {
+    public function getLabelOptions()
+    {
         return $this->labelOptions;
     }
 
@@ -291,7 +316,8 @@ class ShipmentInfo extends DataClass {
      * @param LabelOptions $labelOptions
      * @return ShipmentInfo
      */
-    public function setLabelOptions($labelOptions) {
+    public function setLabelOptions($labelOptions)
+    {
         $this->labelOptions = $labelOptions;
         return $this;
     }
@@ -299,7 +325,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return bool
      */
-    public function getPaperlessTradeEnabled() {
+    public function getPaperlessTradeEnabled()
+    {
         return $this->paperlessTradeEnabled;
     }
 
@@ -307,8 +334,28 @@ class ShipmentInfo extends DataClass {
      * @param bool $paperlessTradeEnabled
      * @return ShipmentInfo
      */
-    public function setPaperlessTradeEnabled($paperlessTradeEnabled) {
+    public function setPaperlessTradeEnabled($paperlessTradeEnabled)
+    {
         $this->paperlessTradeEnabled = $paperlessTradeEnabled;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPaperlessTradeImage()
+    {
+        return $this->paperlessTradeImage;
+    }
+
+    /**
+     * @param string $paperlessTradeImage must be base64 encoded
+     * @return ShipmentInfo
+     */
+    public function setPaperlessTradeImage($paperlessTradeImage)
+    {
+        $this->paperlessTradeImage = $paperlessTradeImage;
 
         return $this;
     }
@@ -316,7 +363,8 @@ class ShipmentInfo extends DataClass {
     /**
      * @return array
      */
-    public function buildData() {
+    public function buildData()
+    {
         $result = [
             'DropOffType' => $this->dropOffType,
             'ServiceType' => $this->serviceType,
@@ -329,7 +377,7 @@ class ShipmentInfo extends DataClass {
 
         if (is_array($this->specialServices) && count($this->specialServices) > 0) {
             $specialServices = [];
-            foreach($this->specialServices as $specialService) {
+            foreach ($this->specialServices as $specialService) {
                 $specialServices[] = ['Service' => $specialService->buildData()];
             }
 
@@ -346,7 +394,7 @@ class ShipmentInfo extends DataClass {
 
         if (is_array($this->documentImages) && count($this->documentImages) > 0) {
             $documentImages = [];
-            foreach($this->documentImages as $documentImage) {
+            foreach ($this->documentImages as $documentImage) {
                 $documentImages[] = ['DocumentImage' => $documentImage->buildData()];
             }
 
@@ -357,6 +405,11 @@ class ShipmentInfo extends DataClass {
             $result['PaperlessTradeEnabled'] = 1;
         }
 
+        if ($this->paperlessTradeImage) {
+            $result['PaperlessTradeImage'] = $this->paperlessTradeImage;
+        }
+
         return $result;
     }
+
 }
