@@ -7,6 +7,10 @@
         {
             "name": "Alexander Reichardt",
             "email": "mail@alexander-reichardt.de"
+        },
+        {
+            "name": "Lukas Mestan",
+            "email": "lukas.mestan@gmail.com"
         }
     ],
     "require": {
