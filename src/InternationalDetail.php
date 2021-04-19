@@ -1,5 +1,5 @@
 <?php
-namespace nebbia\DHLExpress;
+namespace pizzo90\DHLExpress;
 
 
 class InternationalDetail extends DataClass {

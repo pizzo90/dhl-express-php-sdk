@@ -1,5 +1,5 @@
 <?php
-namespace nebbia\DHLExpress;
+namespace pizzo90\DHLExpress;
 
 use DateTime;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace nebbia\DHLExpress;
+namespace pizzo90\DHLExpress;
 
 class ShipmentInfo extends DataClass
 {
